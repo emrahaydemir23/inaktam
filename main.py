@@ -16,9 +16,10 @@ degerler, model = veri.split('|')[0], veri.split('|')[1]
 #degerler = parametre["d"][0]
 #model = parametre["m"][0]
 
+sonuc = "Davacı Lehine"
 tahminSonucu = predict(model, degerler)
-st.title("Tahmin Sonucu:  "+str(tahminSonucu))
-#st.title("Tahmin Sonucu:  "+str(model)+"\n\n"+str(degerler))
+if tahminSonucu == 1: sonuc = "Davalı Lehine"
+st.title("Tahmin Sonucu:  "+sonuc)
 
 
 st.markdown('[Geri Git](https://inaktam.erciyes.edu.tr/kararTahmini.aspx)')
