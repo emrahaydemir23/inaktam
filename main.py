@@ -11,8 +11,10 @@ def predict(model, degerler):
     return prediction
 
 parametre = st.experimental_get_query_params()
-degerler = parametre["d"][0]
-model = parametre["m"][0]
+veri = parametre["i"][0]
+degerler, model = veri.split('|')[0], veri.split('|')[1]
+#degerler = parametre["d"][0]
+#model = parametre["m"][0]
 
 #tahminSonucu = predict(model, degerler)
 #st.title("Tahmin Sonucu:  "+str(tahminSonucu))
